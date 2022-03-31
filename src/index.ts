@@ -1,8 +1,8 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { AdvanceBrowserPlugin } from './definitions';
+import type { AdvanceBrowserWeb } from './web';
 
-const AdvanceBrowser = registerPlugin<AdvanceBrowserPlugin>('AdvanceBrowser', {
+const AdvanceBrowser = registerPlugin<AdvanceBrowserWeb>('AdvanceBrowser', {
   web: () => import('./web').then(m => new m.AdvanceBrowserWeb()),
 });
 
